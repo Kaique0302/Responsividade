@@ -1,0 +1,175 @@
+body {
+    width: 99vw;
+    background-size: cover;
+    background-color: #f0f0f0; /* Cor de fundo do site */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {
+    background-color: #ff7e5f;
+    padding: 10px 0;
+}
+
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center; /* Adiciona alinhamento ao centro para os itens de menu */
+}
+
+
+nav ul li {
+    font-weight: 600;
+    text-transform: uppercase;
+    display: inline;
+}
+
+nav ul li a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding: 10px;
+}
+
+
+nav ul li a:hover {
+    background-color: #feb47b;
+}
+.container {
+    text-align: center;
+    padding: 20px; /* Adiciona espaçamento interno para telas menores */
+ 
+}
+
+.container h1 {
+    color: rgb(255, 0, 0);
+}
+
+
+picture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    margin-top: 20px;
+}
+
+input[type="text"],
+button {
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffffff;
+}
+
+input[type="text"] {
+    width: calc(100% - 130px); /* Largura dinâmica para se ajustar ao tamanho da tela */
+    max-width: 300px; /* Largura máxima do campo de entrada */
+}
+
+button {
+    cursor: pointer;
+    background-color: #ff7e5f; /* Cor do botão */
+    color: #ffffff;
+}
+
+footer {
+    background-color: #ff7e5f;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer h2 {
+    margin-top: 0;
+}
+
+
+.img1, .img2, .img3 {
+    width: 100%; /* Faça as imagens ocuparem a largura total do contêiner */
+    margin: 10px 0; /* Adicione espaçamento vertical entre as imagens */
+}
+
+
+.img1,
+.img2,
+.img3 {
+    width: 150px; /* Define a largura das imagens */
+    margin: 10px; /* Adiciona margem entre as imagens */
+    transition: transform 0.3s ease; /* Adiciona uma transição suave */
+}
+.imagem-container {
+    display: flex;
+    justify-content: center; /* Alinha as imagens horizontalmente ao centro */
+    align-items: center; /* Alinha as imagens verticalmente ao centro */
+}
+
+.img1:hover,
+.img2:hover,
+.img3:hover {
+    transform: scale(0.9); /* Reduz o tamanho da imagem em 10% */
+}
+
+.wrapper {
+    display: flex;
+    position: relative; /* Para posicionar o menu lateral */
+}
+
+#toggle-menu {
+    transform: translateY(100%); /*Colocar Abaixo do Menuf*/
+    top: 10px;
+    left: 10px;
+    z-index: 1; /* Garante que o botão esteja acima do menu */
+}
+
+.menu-lateral {
+    width: 250px; /* Largura do menu lateral */
+    background-color: #ff7e5f; /* Cor de fundo do menu */
+    color: #fff; /* Cor do texto do menu */
+    overflow: hidden; /* Oculta o menu por padrão */
+    position: absolute; /* Posicionamento absoluto para alinhamento */
+    top: 0; /* Alinhamento superior */
+    left: 0; /* Alinhamento à esquerda */
+    opacity: 0; /* Opacidade inicial do menu */
+    transition: opacity 0.3s ease, width 0.3s ease; /* Adiciona uma transição suave para a opacidade e largura do menu */
+}
+
+.menu-lateral.ativo {
+    
+    opacity: 1; /* Opacidade do menu quando estiver ativo */
+}
+
+.menu-lateral ul {
+    list-style-type: none;
+    padding: 0; 
+    margin: 0;
+}
+
+.menu-lateral ul li {
+    padding: 10px;
+    width: 100%; /* Largura total do item do menu */
+    text-align: center; /* Alinhar o texto ao centro */
+    transition: height 0.3s ease; /* Adicionar uma transição suave para a altura dos itens do menu */
+}
+
+.menu-lateral ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+.conteudo {
+    margin-left: 270px;
+}
+
+@media only screen and (max-width: 768px) {
+    nav ul {
+        display: block; /* Altere para exibição de bloco para empilhar itens de menu */
+    }
+
+    nav ul li {
+        display: block; /* Altere para exibição de bloco para empilhar itens de menu */
+        text-align: center; /* Alinhe o texto ao centro */
+    }
+}
